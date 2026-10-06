@@ -2,6 +2,11 @@
 
 ## Read
 
+- [NGRX Install](https://ngrx.io/guide/store/install)
+- [NGRX Effects](https://ngrx.io/guide/effects)
+- [NGRX Walkthrough](https://ngrx.io/guide/store/walkthrough)
+- [NGRX DevTools](https://ngrx.io/guide/store-devtools)
+
 ## Practice
 
 1. Install NgRx:

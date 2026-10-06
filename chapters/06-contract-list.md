@@ -2,6 +2,13 @@
 
 ## Read
 
+- [Angular Signals](https://angular.dev/guide/signals)
+- [Angular University Signals](https://blog.angular-university.io/angular-signals/)
+- [Rainer Hahnekamp: Modern Change Detection](https://www.youtube.com/watch?v=54o9eSGjfW4)
+- [Rainer Hahnekamp: Modern Testing in Angular](https://www.youtube.com/watch?v=lbiOP-VLKGI)
+- [Rainer Hahnekamp: Signals Full Guide](https://youtu.be/6W6gycuhiN0)
+- [Angular DI](https://angular.dev/guide/di)
+
 ## Practice
 
 Implement:

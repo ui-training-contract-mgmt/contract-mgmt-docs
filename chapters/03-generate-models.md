@@ -2,6 +2,8 @@
 
 ## Read
 
+- [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator)
+
 ## Practice
 
 1. Check that Java 11 or newer is installed (the OpenAPI Generator runs on Java):

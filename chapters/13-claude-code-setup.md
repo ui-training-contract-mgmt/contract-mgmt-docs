@@ -2,6 +2,11 @@
 
 ## Read
 
+- [Angular Agent Skills](https://angular.dev/ai/agent-skills)
+- [Angular MCP](https://angular.dev/ai/mcp)
+- [Chrome DevTools](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+- Contact training supervisor for materials regarding AI
+
 ## Practice
 
 1. Install Claude Code and start it in the `contract-mgmt-ui` folder:

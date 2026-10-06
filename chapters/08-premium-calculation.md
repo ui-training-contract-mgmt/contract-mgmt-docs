@@ -2,6 +2,8 @@
 
 ## Read
 
+- nothing new here, but keep in mind to use signal form logic here
+
 ## Practice
 
 Implement on the Draft step:
