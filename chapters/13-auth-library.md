@@ -1,4 +1,4 @@
-# 12. Auth library
+# 13. Auth library
 
 This is a refactoring chapter: the app is finished, now the generic authentication code moves into a library. All features keep working and all tests stay green.
 

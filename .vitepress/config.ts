@@ -19,9 +19,9 @@ const trainingSidebar = [
       { text: '8 - Premium calculation', link: '/chapters/08-premium-calculation' },
       { text: '9 - Document upload', link: '/chapters/09-document-upload' },
       { text: '10 - Sign the contract', link: '/chapters/10-sign-contract' },
-      { text: '11 - Admin resources', link: '/chapters/11-admin-resources-ngrx' },
-      { text: '12 - Auth library', link: '/chapters/12-auth-library' },
-      { text: '13 - Claude Code setup', link: '/chapters/13-claude-code-setup' }
+      { text: '11 - Claude Code setup', link: '/chapters/11-claude-code-setup' },
+      { text: '12 - Admin resources', link: '/chapters/12-admin-resources-ngrx' },
+      { text: '13 - Auth library', link: '/chapters/13-auth-library' }
     ]
   }
 ]

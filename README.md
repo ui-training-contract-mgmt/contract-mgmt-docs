@@ -25,9 +25,9 @@ flowchart LR
 | 8 | [Premium calculation](chapters/08-premium-calculation.md) | Draft step: premium and move to offer |
 | 9 | [Document upload](chapters/09-document-upload.md) | Offer step: documents |
 | 10 | [Sign the contract](chapters/10-sign-contract.md) | Signed step, errors, read-only contract |
-| 11 | [Admin resources](chapters/11-admin-resources-ngrx.md) | Beneficiaries and insured objects with NgRx |
-| 12 | [Auth library](chapters/12-auth-library.md) | Refactor: generic auth logic and header moved into a library |
-| 13 | [Claude Code setup](chapters/13-claude-code-setup.md) | CLAUDE.md, settings, skills and MCP servers |
+| 11 | [Claude Code setup](chapters/11-claude-code-setup.md) | CLAUDE.md, settings, skills and MCP servers |
+| 12 | [Admin resources](chapters/12-admin-resources-ngrx.md) | Beneficiaries and insured objects with NgRx |
+| 13 | [Auth library](chapters/13-auth-library.md) | Refactor: generic auth logic and header moved into a library |
 
 ## Technical rules
 
@@ -55,8 +55,21 @@ flowchart LR
 | JDK | Java 11 or newer, installed on Windows, for the OpenAPI Generator |
 | Git | Current |
 
-## How to work
+## Working mode
 
-- One app, `contract-mgmt-ui`, grows chapter by chapter
-- Each chapter has Read, Practice and Tests
-- Do not move on while the tests are red
+```mermaid
+flowchart LR
+    A[Work on a branch] --> B[Finish the chapter<br/>tests green]
+    B --> C[Open a pull request]
+    C --> D{Trainer review}
+    D -->|changes requested| A
+    D -->|approved| E[Squash merge into main]
+    E --> F[Next chapter]
+```
+
+| Rule | Meaning |
+|------|---------|
+| One pull request per chapter | Work on a branch per chapter and open a pull request when the chapter is done and its tests are green |
+| Wait for the review | Do not start the next chapter before the trainer has reviewed the pull request. Fix requested changes on the same branch |
+| Squash merge | The trainer merges with **squash merge**, so every chapter becomes one commit on `main` |
+| Conventional Commits title | The pull request title must follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), because it becomes the commit message on `main`. Example: `feat(login): add keycloak login with angular-oauth2-oidc` |

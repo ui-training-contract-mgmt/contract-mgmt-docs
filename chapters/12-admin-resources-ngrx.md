@@ -1,4 +1,4 @@
-# 11. Admin resources with NgRx
+# 12. Admin resources with NgRx
 
 ## Read
 
@@ -8,6 +8,8 @@
 - [NGRX DevTools](https://ngrx.io/guide/store-devtools)
 
 ## Practice
+
+You can use Claude Code (set up in chapter 11) to implement this chapter.
 
 1. Install NgRx:
 

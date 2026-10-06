@@ -1,4 +1,4 @@
-# 13. Claude Code setup
+# 11. Claude Code setup
 
 ## Read
 
@@ -20,11 +20,11 @@ claude
 | What | Business description |
 |------|----------------------|
 | Overview | What the app is and which BFF it talks to |
-| Structure | The app and the auth library, where features, services, store and models live |
+| Structure | The app, where features, services, store and models live |
 | Technical rules | The rules of the training README: standalone, OnPush, signals, services for HTTP, i18n for every text, ng-aquila, NgRx only for beneficiaries and insured objects |
 | Models | Models are generated from the Swagger file; never edited by hand |
 | Quality | ESLint, Prettier, tests for every change, Conventional Commits, no skipped hooks |
-| Boundaries | The auth library knows nothing about contracts |
+| Boundaries | Authentication code (config, auth service, interceptor, guards, directive, header, login page) stays generic and knows nothing about contracts, because it moves into a library in the last chapter |
 
 3. Create `.claude/settings.json` (committed) with the shared project settings:
 
