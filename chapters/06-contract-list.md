@@ -1,0 +1,26 @@
+# 6. Contract list
+
+## Read
+
+## Practice
+
+Implement:
+
+| What | Business description |
+|------|----------------------|
+| Contracts service | One service for BFF calls on contracts. For now: list and get one |
+| Homepage | A table of all contracts with name, status and beneficiary |
+| Search | A field above the table. The list narrows while typing, matching contract name or beneficiary name, ignoring case |
+| Empty state | A translated message when nothing matches |
+| Navigation | Each name opens the contract page and a button starts a new contract (both pages follow in the next chapter) |
+| Translations | All new texts in English and German |
+
+Check the three seeded contracts and try searching for `life`.
+
+## Tests
+
+- The service requests the contract list
+- The page shows every contract
+- Typing in the search field reduces the rows to the matching contracts
+
+Done when the list and the search work and the tests are green.
