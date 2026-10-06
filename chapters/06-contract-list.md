@@ -24,6 +24,10 @@ Implement:
 
 Check the three seeded contracts and try searching for `life`.
 
+## Visual mockup
+
+![Searchable contract table with a new contract button](./mockups/06-contract-list.png)
+
 ## Tests
 
 - The service requests the contract list

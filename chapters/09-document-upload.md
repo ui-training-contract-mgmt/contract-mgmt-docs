@@ -37,6 +37,10 @@ The flow, managed with RxJS:
 
 Choose two files, remove one and add another, then continue. Watch the network tab: one upload request per file, and the transition request starts only after the last upload has finished.
 
+## Visual mockup
+
+![Offer-step document selection, pending files, stored files, and continue action](./mockups/09-document-upload.png)
+
 ## Tests
 
 - The service uploads a file as a multipart form

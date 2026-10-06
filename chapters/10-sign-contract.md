@@ -22,6 +22,10 @@ Implement on the Review step:
 
 Test as `broker` (no delete button) and as `admin`.
 
+## Visual mockup
+
+![Review card with confirmation checkbox, sign button, and superadmin delete option](./mockups/10-sign-contract.png)
+
 ## Tests
 
 - The sign button is disabled until the checkbox is ticked

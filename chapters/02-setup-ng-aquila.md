@@ -27,6 +27,10 @@ npm i @aposin/ng-aquila @angular/cdk@21 @angular/animations@21 --legacy-peer-dep
 
 5. Run the app and check the page in the browser.
 
+## Visual mockup
+
+![First page with an ng-aquila primary button](./mockups/02-first-page.png)
+
 ## Tests
 
 - The first page shows the title and the button

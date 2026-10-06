@@ -23,6 +23,10 @@ Implement:
 
 Create a contract and check that it appears in the list as Draft and opens on the first step.
 
+## Visual mockup
+
+![New contract form with the contract status stepper](./mockups/07-create-contract.png)
+
 ## Tests
 
 - The service creates a contract with name, type and beneficiary

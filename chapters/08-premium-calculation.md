@@ -20,6 +20,10 @@ Implement on the Draft step:
 
 Create a contract, calculate the premium, then move it to Offer.
 
+## Visual mockup
+
+![Draft contract with premium calculation and move to offer action](./mockups/08-premium-calculation.png)
+
 ## Tests
 
 - The service sends the target stage for a transition

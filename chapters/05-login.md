@@ -67,6 +67,10 @@ Read from the access token by the auth service:
 4. Change a value in `app.config.json` (for example the client id), reload without rebuilding, and see that the login uses it.
 5. Log in as `broker` and as `admin` and compare the roles you see.
 
+## Visual mockup
+
+![Login card with a primary log in button](./mockups/05-login.png)
+
 ## Tests
 
 - The config is loaded from the file before the app starts, and a missing file gives an error
