@@ -10,7 +10,8 @@ Implement on the Draft step:
 
 | What | Business description |
 |------|----------------------|
-| Service calls | Calculate the premium of a contract and move a contract to a target stage |
+| Service calls | Retrieve the insured objects for the current contract type, calculate the premium of a contract, and move a contract to a target stage |
+| Insured objects | Retrieve the insured objects with an HTTP call based on the current contract type. Show every returned object as a separate card, with its type and insured value |
 | Premium display | Shows the premium, or a dash while it is not calculated. The user can never type a premium |
 | Calculate button | Asks the BFF to calculate the premium and shows the contract returned |
 | Move to offer button | Disabled until a premium exists. Moves the contract to Offer and the stepper follows |
@@ -30,5 +31,7 @@ Create a contract, calculate the premium, then move it to Offer.
 - The move to offer button is disabled without a premium
 - The move to offer button is enabled with a premium
 - Calculating shows the premium returned by the BFF
+- Every insured object is displayed as a card
+- The insured-objects request uses the current contract type
 
 Done when the move to offer is only possible with a premium and the tests are green.

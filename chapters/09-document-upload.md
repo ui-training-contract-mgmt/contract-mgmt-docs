@@ -17,10 +17,9 @@ Implement on the Offer step:
 | Service calls | Upload a document to a contract and download a document. The BFF accepts one file per upload request |
 | File selection directive | A reusable directive for a file input that reports the chosen file and clears the input |
 | Choosing files | A file picker that accepts only pdf and docx. A chosen file is **not** sent to the BFF; it is kept in browser memory in a signal. Documents can only be added while the contract is in Offer |
-| Pending list | Shows the names of the files in memory, each with a remove button. Files are lost when the page is reloaded |
-| Document list | Shows the documents already stored in the BFF, each with a download button |
+| Documents table | Shows both files in memory and documents already stored in the BFF in one table. Each row has the document name, a status (`Pending` for files in memory or `Uploaded` for stored documents), a download icon and a delete icon. The download icon is enabled only for uploaded documents; deleting a pending document removes it from memory. Files in memory are lost when the page is reloaded |
 | Continue button | Disabled until the stored documents plus the files in memory are at least 2. Pressing it runs the flow below and moves the contract to Review |
-| Visibility | The file picker, the pending list and the continue button only exist while the contract is in Offer; the stored document list stays visible afterwards |
+| Visibility | The file picker and the continue button only exist while the contract is in Offer; the documents table stays visible afterwards. The pending-document delete action only exists while the contract is in Offer |
 | Translations | All new texts in English and German |
 
 The flow, managed with RxJS:
@@ -46,7 +45,8 @@ Choose two files, remove one and add another, then continue. Watch the network t
 - The service uploads a file as a multipart form
 - The directive reports the chosen file
 - A chosen file is kept in memory and no request is sent
-- A file in memory can be removed
+- A pending file can be deleted from the documents table
+- An uploaded document can be downloaded using its download icon
 - Continue is disabled with one document in total, enabled with two
 - Continuing sends one upload request per file and sends the Review transition only after all uploads have been answered
 - If an upload fails, no transition request is sent and the message is shown
