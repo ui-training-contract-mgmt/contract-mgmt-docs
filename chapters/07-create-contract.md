@@ -33,3 +33,10 @@ Create a contract and check that it appears in the list as Draft and opens on th
 - The form is invalid until all three fields are filled
 
 Done when a new Draft contract can be created and the stepper shows its stage, and the tests are green.
+
+## What to explain
+
+- How signal forms work
+- Issues with i18n or argue over the implementation
+- How would you implement certain custom elements for form controls using the ControlValueAccessor Signal Form interface
+- How you handle validations for a larger form

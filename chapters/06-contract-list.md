@@ -35,3 +35,8 @@ Check the three seeded contracts and try searching for `life`.
 - Typing in the search field reduces the rows to the matching contracts
 
 Done when the list and the search work and the tests are green.
+
+## Be able to explain
+
+- How testing works (problems, how mocks for tests will be maintained across the app)
+- How signals work (DI, Change Detection, argues over usecases, usage in testing, when will you use a computed, linkedSignal or effect)

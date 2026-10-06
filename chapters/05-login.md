@@ -93,3 +93,8 @@ Done when the Keycloak settings come only from `app.config.json`, anonymous user
 | After the login | The homepage (the contract list, still a placeholder in this chapter) with a header: link to contracts, your username, the language switch and a logout button |
 | Click logout | The header disappears and you are back on the login page; opening the app again asks for the login |
 | Open the app as `admin` and as `broker` | The same page and header with a different username; the roles differ (the admin link for superadmins follows in the admin chapter) |
+
+
+## Be able to explain
+
+- OAuth 2.0 Standard Flow (how does it work, including the application flow, token management, etc.)

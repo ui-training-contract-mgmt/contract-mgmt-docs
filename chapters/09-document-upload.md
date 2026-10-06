@@ -53,3 +53,7 @@ Choose two files, remove one and add another, then continue. Watch the network t
 - After a successful flow the memory list is empty
 
 Done when files wait in memory until the continue button uploads them all and moves the contract to Review, and the tests are green.
+
+## What to explain
+
+- RxJs operator orchestration

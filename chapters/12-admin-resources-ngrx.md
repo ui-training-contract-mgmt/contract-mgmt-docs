@@ -51,3 +51,9 @@ Test as `admin`: add and delete beneficiaries and insured objects. As `broker` t
 - The contract form still validates after switching to the store
 
 Done when admins can manage both resources through the store, brokers cannot, and the tests are green.
+
+
+## What to explain
+
+- NgRx Logical Flow
+- NgRx Testing
