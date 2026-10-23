@@ -15,7 +15,7 @@
 1. Install the OAuth2/OIDC library and `jwt-decode`. The OAuth2/OIDC major version must match Angular:
 
 ```
-npm i angular-oauth2-oidc@22 jwt-decode --legacy-peer-deps
+npm i angular-oauth2-oidc@22 jwt-decode
 ```
 
 2. The values for `angular-oauth2-oidc` and `app.config.json` (local setup, Keycloak seeded in chapter 1). The property names are the ones of the library's `AuthConfig`, so the file can be passed to the library as it is:

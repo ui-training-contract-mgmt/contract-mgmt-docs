@@ -12,7 +12,7 @@
 2. Install the libraries:
 
 ```
-npm i @allianz/ng-aquila @angular/cdk@22 @angular/animations@22 --legacy-peer-deps
+npm i @allianz/ng-aquila@22 @angular/cdk@22 @angular/animations@22
 ```
 
 3. Register the ng-aquila theme and the normalize stylesheet (both in `node_modules/@allianz/ng-aquila`) in the styles of `angular.json`.
