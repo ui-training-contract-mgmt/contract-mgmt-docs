@@ -1,10 +1,10 @@
 # Contract Management – Frontend Training
 
-Build an Angular 21 frontend for the contract management BFF, one feature per chapter.
+Build an Angular 22 frontend for the contract management BFF, one feature per chapter.
 
 ```mermaid
 flowchart LR
-    UI[Angular 21 app<br/>ng-aquila] -->|Bearer JWT| BFF[BFF<br/>NestJS :3000/api/v1]
+    UI[Angular 22 app<br/>ng-aquila] -->|Bearer JWT| BFF[BFF<br/>NestJS :3000/api/v1]
     UI -->|login redirect| KC[Keycloak :8081]
     BFF --> DB[(Postgres)]
     BFF -->|verifies JWT| KC
@@ -23,7 +23,7 @@ flowchart LR
 | 6 | [Contract list](chapters/06-contract-list.md) | Homepage with search |
 | 7 | [Create a contract](chapters/07-create-contract.md) | Draft form and contract page with stepper |
 | 8 | [Premium calculation](chapters/08-premium-calculation.md) | Draft step: premium and move to offer |
-| 9 | [Document upload](chapters/09-document-upload.md) | Offer step: documents |
+| 9 | [Document upload](chapters/09-document-upload.md) | Offer step: select and save documents, then continue to Review |
 | 10 | [Sign the contract](chapters/10-sign-contract.md) | Signed step, errors, read-only contract |
 | 11 | [Claude Code setup](chapters/11-claude-code-setup.md) | CLAUDE.md, settings, skills and MCP servers |
 | 12 | [Admin resources](chapters/12-admin-resources-ngrx.md) | Beneficiaries and insured objects with NgRx |
@@ -39,7 +39,7 @@ flowchart LR
 | HttpClient | One service per BFF resource; components never call HttpClient |
 | Services, interceptor, directives | Logic in services, cross-cutting in the interceptor, reusable UI behaviour in directives |
 | i18n | All texts translated with ngx-translate, English and German |
-| ng-aquila | UI components come from ng-aquila |
+| ng-aquila | UI components come from `@allianz/ng-aquila` |
 | NgRx | Only beneficiaries and insured objects. Contracts do not use NgRx |
 | Code quality | ESLint (added with the Angular generator) and Prettier on every file |
 | Git hooks | Use and enforce git hooks, managed with [husky](https://typicode.github.io/husky/): staged files are linted and formatted before every commit, and commit messages must follow Conventional Commits. Never skip the hooks |

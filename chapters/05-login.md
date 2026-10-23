@@ -3,6 +3,7 @@
 ## Read
 
 - [Angular OAuth2 OIDC](https://github.com/manfredsteyer/angular-oauth2-oidc)
+- [jwt-decode](https://github.com/auth0/jwt-decode)
 - [Angular Interceptor](https://angular.dev/guide/http/interceptors)
 - [Angular Guard](https://angular.dev/guide/routing/route-guards)
 - [Angular Standalone](https://angular.dev/reference/migrations/standalone)
@@ -11,10 +12,10 @@
 
 ## Practice
 
-1. Install the OAuth2/OIDC library. The major version must match Angular:
+1. Install the OAuth2/OIDC library and `jwt-decode`. The OAuth2/OIDC major version must match Angular:
 
 ```
-npm i angular-oauth2-oidc@21 --legacy-peer-deps
+npm i angular-oauth2-oidc@22 jwt-decode --legacy-peer-deps
 ```
 
 2. The values for `angular-oauth2-oidc` and `app.config.json` (local setup, Keycloak seeded in chapter 1). The property names are the ones of the library's `AuthConfig`, so the file can be passed to the library as it is:
@@ -56,7 +57,7 @@ Read from the access token by the auth service:
 | Discovery | The endpoints (authorization, token, logout and the JWKS keys) are not configured by hand: the library loads them from the discovery document of the issuer |
 | Startup | After the config is loaded, the app loads the discovery document and lets the library finish a login if Keycloak has just redirected back with a code. The redirect target is the app itself, so no callback page is needed. After a successful login the user lands on the contract list |
 | Token refresh | The library renews the access token automatically before it expires |
-| Auth service | A thin service around the library: whether the user is logged in (as a signal), username, roles read from the access token, login, logout |
+| Auth service | A thin service around the library: whether the user is logged in (as a signal), username and roles read from the access token with `jwt-decode`, login, logout. Decoding reads claims; token validation remains the responsibility of the OAuth2/OIDC library |
 | Login page | A page with one button that starts the login |
 | Logout | Calls the library's `logOut()` method (no hand-written token removal or redirect). The library clears the stored tokens and sends the user to the Keycloak logout endpoint, using the post-logout redirect URI from the settings, so the Keycloak session ends too |
 | Interceptor | Adds the access token to every BFF request, but not to other requests. When the BFF answers 401 the user goes to the login page |
@@ -74,7 +75,7 @@ Read from the access token by the auth service:
 ## Tests
 
 - The config is loaded from the file before the app starts, and a missing file gives an error
-- The auth service reports logged in, username and roles from an access token (the library is replaced by a stub)
+- The auth service reports logged in, username and roles decoded with `jwt-decode` from an access token (the OAuth2/OIDC library is replaced by a stub)
 - The auth service reports logged out when the library has no valid token
 - The auth service logout calls `logOut()` of the library
 - The interceptor adds the token to BFF requests only

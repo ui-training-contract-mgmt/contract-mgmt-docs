@@ -17,7 +17,7 @@ ng generate library auth --prefix=auth
 | Moves into the library | Stays in the app |
 |------------------------|------------------|
 | Runtime config loading and the config service | `app.config.json` itself and the call that loads it before bootstrap |
-| Auth service: login, current user, roles, logout (a thin wrapper around angular-oauth2-oidc) | The contract and admin routes and the page opened after login |
+| Auth service: login, current user, roles decoded with `jwt-decode`, logout (a thin wrapper around angular-oauth2-oidc) | The contract and admin routes and the page opened after login |
 | Interceptor | The BFF URL that decides which requests get the token |
 | Auth guard and role guard | The admin routes that use the role guard |
 | Role directive | Contract and admin pages |
@@ -34,7 +34,7 @@ ng generate library auth --prefix=auth
 | Header | Shows the username and a logout button. The navigation links (contracts, and the admin links shown only to superadmins) and the language switch are supplied by the app through content projection. It is a standalone, OnPush, ng-aquila component with translated texts |
 | Texts | The library ships its own translation keys (login, logout, header) and the app merges them into its translation files |
 | Public API | The library exports only what the app needs: provider function, guards, directive, header, login page, auth service. Everything else stays internal |
-| Dependencies | The library declares Angular, ng-aquila, ngx-translate and `angular-oauth2-oidc` as peer dependencies |
+| Dependencies | The library declares Angular, `@allianz/ng-aquila`, ngx-translate, `angular-oauth2-oidc` and `jwt-decode` as peer dependencies |
 
 4. Refactor the app:
 

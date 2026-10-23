@@ -93,14 +93,14 @@ Demo users: `broker` / `broker`, `admin` / `admin` (superadmin).
 
 ```
 cd ../..
-npx @angular/cli@21 new contract-mgmt-ui --style=scss --ssr=false
+npx @angular/cli@22 new contract-mgmt-ui --style=scss --ssr=false
 cd contract-mgmt-ui
 ```
 
 12. Set up ESLint with the Angular generator. Do not configure ESLint by hand: the `ng add` command installs the packages, creates the ESLint configuration and adds the `lint` target, which is also what `ng lint` suggests in a project without a linter. Then run it:
 
 ```
-ng add angular-eslint@21
+ng add angular-eslint@22
 npm run lint
 ```
 

@@ -14,7 +14,7 @@ You can use Claude Code (set up in chapter 11) to implement this chapter.
 1. Install NgRx:
 
 ```
-npm i @ngrx/store@21 @ngrx/effects@21
+npm i @ngrx/store@22 @ngrx/effects@22
 ```
 
 2. Implement for beneficiaries:
